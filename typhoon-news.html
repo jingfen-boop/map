@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <meta http-equiv="refresh" content="1800">
+
+  <title>日本颱風中文新聞</title>
+
+  <style>
+    :root {
+      --navy: #173b67;
+      --blue: #2e73b8;
+      --pale-blue: #eef7ff;
+      --border: #dce8f2;
+      --text: #263442;
+      --muted: #687888;
+      --white: #ffffff;
+      --warning: #fff8e8;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: #f7fafc;
+      color: var(--text);
+      font-family:
+        "Noto Sans TC",
+        "Microsoft JhengHei",
+        Arial,
+        sans-serif;
+    }
+
+    .page {
+      width: min(100%, 920px);
+      margin: 0 auto;
+      padding: 20px 14px 30px;
+    }
+
+    .header {
+      padding: 22px;
+      margin-bottom: 16px;
+      color: var(--white);
+      background:
+        linear-gradient(135deg, #173b67, #4288c8);
+      border-radius: 18px;
+    }
+
+    .header h1 {
+      margin: 0 0 8px;
+      font-size: clamp(24px, 5vw, 34px);
+    }
+
+    .header p {
+      margin: 0;
+      line-height: 1.7;
+      opacity: 0.95;
+    }
+
+    .status {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 16px;
+      align-items: center;
+      padding: 12px 15px;
+      margin-bottom: 14px;
+      background: var(--warning);
+      border: 1px solid #f1dfb4;
+      border-radius: 12px;
+      font-size: 14px;
+      color: #725b2d;
+    }
+
+    .status strong {
+      color: #554218;
+    }
+
+    .news-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .news-card {
+      padding: 17px 18px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+    }
+
+    .news-card:hover {
+      border-color: #a8c9e6;
+    }
+
+    .news-meta {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 9px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .source {
+      padding: 3px 9px;
+      color: var(--navy);
+      background: var(--pale-blue);
+      border-radius: 999px;
+      font-weight: 700;
+    }
+
+    .news-card h2 {
+      margin: 0 0 12px;
+      font-size: clamp(17px, 3.8vw, 21px);
+      line-height: 1.55;
+    }
+
+    .news-card h2 a {
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .news-card h2 a:hover {
+      color: var(--blue);
+      text-decoration: underline;
+    }
+
+    .read-more {
+      display: inline-block;
+      color: var(--blue);
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .empty {
+      padding: 28px;
+      text-align: center;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+    }
+
+    .footer {
+      margin-top: 17px;
+      padding: 14px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.7;
+      text-align: center;
+    }
+
+    @media (max-width: 520px) {
+      .page {
+        padding: 10px 8px 20px;
+      }
+
+      .header {
+        padding: 18px 16px;
+        border-radius: 13px;
+      }
+
+      .news-card {
+        padding: 15px;
+      }
+
+      .news-meta {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 6px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+    <header class="header">
+      <h1>🌀 日本颱風中文新聞</h1>
+      <p>
+        自動彙整與日本颱風、暴風雨及旅遊影響相關的中文新聞。
+      </p>
+    </header>
+
+    <section class="status">
+      <strong>最近更新：</strong>
+      <span>2026/07/31 22:21（台灣時間）</span>
+      <span>｜約每 30 分鐘檢查一次</span>
+    </section>
+
+    <section class="news-list">
+      
+    <article class="news-card">
+      <div class="news-meta">
+        <span class="source">商周</span>
+        <time>07/31 19:44</time>
+      </div>
+
+      <h2>
+        <a href="https://news.google.com/rss/articles/CBMiYkFVX3lxTE54ajY3ejJEbEthZ1BHVVd4VXZ3NFZhcW03OTN1UVBGcFlTbmFpSDhuWHpfVk1wdEt6MTYwTW1nY1BqT01rMll3ZXNYU3FhOE1vMlBRZmNFVFhia1VNWk5LdXNR?oc=5" target="_blank" rel="noopener noreferrer">
+          白海豚颱風動態》最新路徑南修、會不會來台灣？8月赴日影響、停班停課機率一次看（持續更新）
+        </a>
+      </h2>
+
+      <a class="read-more"
+         href="https://news.google.com/rss/articles/CBMiYkFVX3lxTE54ajY3ejJEbEthZ1BHVVd4VXZ3NFZhcW03OTN1UVBGcFlTbmFpSDhuWHpfVk1wdEt6MTYwTW1nY1BqT01rMll3ZXNYU3FhOE1vMlBRZmNFVFhia1VNWk5LdXNR?oc=5"
+         target="_blank"
+         rel="noopener noreferrer">
+        閱讀原文 →
+      </a>
+    </article>
+    
+
+    <article class="news-card">
+      <div class="news-meta">
+        <span class="source">Yahoo新聞</span>
+        <time>07/31 17:00</time>
+      </div>
+
+      <h2>
+        <a href="https://news.google.com/rss/articles/CBMi9AJBVV95cUxQRkZ2cnpaVm1QdTU5anZPTW9PS1F5WHZBdFMtRWtaaktTTHlKQ3B6c1VfclNDT3RVMlpFRlR2d0JhWnZwN0lrcXQzNzk2a0JCYktlcHZCMkFDeGs3ZzExMFczdklfX25yaWhpQ013WFNPWXpHTE9Wc2JxZ0l5Q0RtOTVoLTItMUI2UmVfcUJlZk5TUER5SVp6NnRfUDJmWVhtQWIzVFdSRnltZlpBMFVvYU1HQmh0VTdvcjhPRHd3cm03RXZXV3VZajRZTFFzb2hnanhUU3ktSGRuVnVpX1NZWEhlak84UlRoaDRSZGRqZ0RNalhMSnh6c1FvSU5Dd3JDRUVKU0pkaUxDVVhYd0RmcXBfbWhmUzlGamRzMnhaYk9uODVjSFFPWXdvUjY0SDRLZjRBdGhVaVF1ckJqalY4ZlpxRVg2cEg1QVJ3TEgtZlRLdVc5U0M2QUYwRlpGZnB0bFlVU29QZko3LTRDbXh2ZEpPTmM?oc=5" target="_blank" rel="noopener noreferrer">
+          颱風白海豚強度維持強烈颱風 路徑將接近日本南方海面
+        </a>
+      </h2>
+
+      <a class="read-more"
+         href="https://news.google.com/rss/articles/CBMi9AJBVV95cUxQRkZ2cnpaVm1QdTU5anZPTW9PS1F5WHZBdFMtRWtaaktTTHlKQ3B6c1VfclNDT3RVMlpFRlR2d0JhWnZwN0lrcXQzNzk2a0JCYktlcHZCMkFDeGs3ZzExMFczdklfX25yaWhpQ013WFNPWXpHTE9Wc2JxZ0l5Q0RtOTVoLTItMUI2UmVfcUJlZk5TUER5SVp6NnRfUDJmWVhtQWIzVFdSRnltZlpBMFVvYU1HQmh0VTdvcjhPRHd3cm03RXZXV3VZajRZTFFzb2hnanhUU3ktSGRuVnVpX1NZWEhlak84UlRoaDRSZGRqZ0RNalhMSnh6c1FvSU5Dd3JDRUVKU0pkaUxDVVhYd0RmcXBfbWhmUzlGamRzMnhaYk9uODVjSFFPWXdvUjY0SDRLZjRBdGhVaVF1ckJqalY4ZlpxRVg2cEg1QVJ3TEgtZlRLdVc5U0M2QUYwRlpGZnB0bFlVU29QZko3LTRDbXh2ZEpPTmM?oc=5"
+         target="_blank"
+         rel="noopener noreferrer">
+        閱讀原文 →
+      </a>
+    </article>
+    
+
+    <article class="news-card">
+      <div class="news-meta">
+        <span class="source">ETtoday新聞雲</span>
+        <time>07/31 15:12</time>
+      </div>
+
+      <h2>
+        <a href="https://news.google.com/rss/articles/CBMiXkFVX3lxTE83NnNrNkxYWkJORFNDMkpNbFp1MkFFUGVOZjRYNThvdHpmMXpQZldiN3RkR3JvZGppVzJYTDlTWmJMNVRJdWp1NzZZN0IyaHQ2VHA0Ty1SYXFkNWl6ZFHSAUtBVV95cUxQN296SG1YZ2Nfd2RCbVh3NG1JM3p6VHBfY0tOM1ZCQUVfTDIwVEZmYmQyeUJPSWJubURZai1ONGRaWTRqYktaNmFZdHM?oc=5" target="_blank" rel="noopener noreferrer">
+          外媒封超級颱風！日本估白海豚8/5抵日本海域 可能接近沖繩
+        </a>
+      </h2>
+
+      <a class="read-more"
+         href="https://news.google.com/rss/articles/CBMiXkFVX3lxTE83NnNrNkxYWkJORFNDMkpNbFp1MkFFUGVOZjRYNThvdHpmMXpQZldiN3RkR3JvZGppVzJYTDlTWmJMNVRJdWp1NzZZN0IyaHQ2VHA0Ty1SYXFkNWl6ZFHSAUtBVV95cUxQN296SG1YZ2Nfd2RCbVh3NG1JM3p6VHBfY0tOM1ZCQUVfTDIwVEZmYmQyeUJPSWJubURZai1ONGRaWTRqYktaNmFZdHM?oc=5"
+         target="_blank"
+         rel="noopener noreferrer">
+        閱讀原文 →
+      </a>
+    </article>
+    
+
+    <article class="news-card">
+      <div class="news-meta">
+        <span class="source">蘋果仁</span>
+        <time>07/31 17:00</time>
+      </div>
+
+      <h2>
+        <a href="https://news.google.com/rss/articles/CBMiTEFVX3lxTE5Tbkxub3RGVFlpRUkySnNTTUg2NEJtcjA5RVhpcFNicGRRMm9XYkg4S21wNEEzMmVFMy0yTnhzMlhWR2gyWXMwcGJXTEw?oc=5" target="_blank" rel="noopener noreferrer">
+          白海豚颱風生成！7/28 最新路徑估快速增強，朝日本東南方前進、對台影響一次看
+        </a>
+      </h2>
+
+      <a class="read-more"
+         href="https://news.google.com/rss/articles/CBMiTEFVX3lxTE5Tbkxub3RGVFlpRUkySnNTTUg2NEJtcjA5RVhpcFNicGRRMm9XYkg4S21wNEEzMmVFMy0yTnhzMlhWR2gyWXMwcGJXTEw?oc=5"
+         target="_blank"
+         rel="noopener noreferrer">
+        閱讀原文 →
+      </a>
+    </article>
+    
+
+    <article class="news-card">
+      <div class="news-meta">
+        <span class="source">中央社 CNA</span>
+        <time>07/30 17:19</time>
+      </div>
+
+      <h2>
+        <a href="https://news.google.com/rss/articles/CBMiX0FVX3lxTE0wUU11QnZpdjQwUWtZTG81QWxDbEhFWTM1R2dLUlprUXlPWk5nTEppNVhNS1ZhbVh6Y01CdHNLU2tyVU94MHlRR2lEd0J2MWZfQkFQN3VWVXJOYzk2bXZr?oc=5" target="_blank" rel="noopener noreferrer">
+          颱風白海豚朝日本南方海面前進路徑仍有不確定性| 生活
+        </a>
+      </h2>
+
+      <a class="read-more"
+         href="https://news.google.com/rss/articles/CBMiX0FVX3lxTE0wUU11QnZpdjQwUWtZTG81QWxDbEhFWTM1R2dLUlprUXlPWk5nTEppNVhNS1ZhbVh6Y01CdHNLU2tyVU94MHlRR2lEd0J2MWZfQkFQN3VWVXJOYzk2bXZr?oc=5"
+         target="_blank"
+         rel="noopener noreferrer">
+        閱讀原文 →
+      </a>
+    </article>
+    
+
+    <article class="news-card">
+      <div class="news-meta">
+        <span class="source">UDN</span>
+        <time>07/31 11:40</time>
+      </div>
+
+      <h2>
+        <a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE9fb0dhdHk0cU1ZR0tEeGR5REdxeHZyNGlNNTFNd1pkR2RaZWpxSENSUDl6UWl3eS1aSmU4OHVSSXltZjRUTUZhV1BnR0FnMTRGMl9Yd3Rn0gFWQVVfeXFMT19vR2F0eTRxTVlHS0R4ZHlER3F4dnI0aU01MU13WmRHZFplanFIQ1JQOXpRaXd5LVpKZTg4dVJJeW1mNFRNRmFXUGdHQWcxNEYyX1h3dGc?oc=5" target="_blank" rel="noopener noreferrer">
+          白海豚維持巔峰 颱風論壇曝侵襲台灣機率 日本3地區恐受威脅
+        </a>
+      </h2>
+
+      <a class="read-more"
+         href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE9fb0dhdHk0cU1ZR0tEeGR5REdxeHZyNGlNNTFNd1pkR2RaZWpxSENSUDl6UWl3eS1aSmU4OHVSSXltZjRUTUZhV1BnR0FnMTRGMl9Yd3Rn0gFWQVVfeXFMT19vR2F0eTRxTVlHS0R4ZHlER3F4dnI0aU01MU13WmRHZFplanFIQ1JQOXpRaXd5LVpKZTg4dVJJeW1mNFRNRmFXUGdHQWcxNEYyX1h3dGc?oc=5"
+         target="_blank"
+         rel="noopener noreferrer">
+        閱讀原文 →
+      </a>
+    </article>
+    
+
+    <article class="news-card">
+      <div class="news-meta">
+        <span class="source">hakkanews.tw</span>
+        <time>07/27 11:41</time>
+      </div>
+
+      <h2>
+        <a href="https://news.google.com/rss/articles/CBMiUEFVX3lxTE94cFpKZFZfdjQ3MFU2QkNHajFpNm5neExsZVBXWnZORWdyZFJ3aDBCMUZySzBjb2x1SzI5Q25TRUIyNjBjNVlhLWR5cGlhVHFY?oc=5" target="_blank" rel="noopener noreferrer">
+          「白海豚」颱風最快今生成 估撲向日本、對台無威脅
+        </a>
+      </h2>
+
+      <a class="read-more"
+         href="https://news.google.com/rss/articles/CBMiUEFVX3lxTE94cFpKZFZfdjQ3MFU2QkNHajFpNm5neExsZVBXWnZORWdyZFJ3aDBCMUZySzBjb2x1SzI5Q25TRUIyNjBjNVlhLWR5cGlhVHFY?oc=5"
+         target="_blank"
+         rel="noopener noreferrer">
+        閱讀原文 →
+      </a>
+    </article>
+    
+
+    <article class="news-card">
+      <div class="news-meta">
+        <span class="source">inews.hket.com</span>
+        <time>07/31 17:53</time>
+      </div>
+
+      <h2>
+        <a href="https://news.google.com/rss/articles/CBMixANBVV95cUxOT3UtbjV3ZHFNTDhBZ2pvdm1uWFlRZnpqM3o4XzFDZ1I1M1pOakZRZWhIQ1h1Y3Q5cGhjNDVzMGVlR010VUlFYkdGTUJRRXNEZ3l5NnF1dlhlSkFpTVh4OExYOWEybU5YMDl3aS1uRmZmZGN4N0FOVlpTTkgtRVJBam9KbjVEVGxZSGpYcko5b0YzWW81ZzhMb2JKLUNTVFNTdFQ0LWhBaXVxWDc5dU91bUFMMUxkWTBRVkk1WFpGVlJlRjhJOUgtRFBkYmtBaEEzMXBMc0FSbTBrbGgxcGNETXJaVWtSbDI2UmtmQ19Ed25Tak03Z0FjeEZfWkZQMWFxZUlZaG8wajQwVFRQODZ4eHNFUUYzY0JLWkI4MHUyOG40ekVBV3RLaEcwcnBYYW13WkppS2gtUGVUWWliejV4eHNnak5acGxIbWVYaXFaMDJ4cldLWGt3allLMHpmOFFfV0VQd25QU1dDa1JVNmo3S3Nfbm1rR1R3QVR1R3FrTEZsZnZHdDctSW80aHpwcDhmRTg0T1BhLW8yNEw3NzRNVzhYaVFwbnppZ0FaeWxFM1RpeUxkWjhFTzdyWk5xQ3VNQXc1WA?oc=5" target="_blank" rel="noopener noreferrer">
+          【颱風】超強颱風「白海豚」風力直逼歷史高峰 登陸地點幾時先知？
+        </a>
+      </h2>
+
+      <a class="read-more"
+         href="https://news.google.com/rss/articles/CBMixANBVV95cUxOT3UtbjV3ZHFNTDhBZ2pvdm1uWFlRZnpqM3o4XzFDZ1I1M1pOakZRZWhIQ1h1Y3Q5cGhjNDVzMGVlR010VUlFYkdGTUJRRXNEZ3l5NnF1dlhlSkFpTVh4OExYOWEybU5YMDl3aS1uRmZmZGN4N0FOVlpTTkgtRVJBam9KbjVEVGxZSGpYcko5b0YzWW81ZzhMb2JKLUNTVFNTdFQ0LWhBaXVxWDc5dU91bUFMMUxkWTBRVkk1WFpGVlJlRjhJOUgtRFBkYmtBaEEzMXBMc0FSbTBrbGgxcGNETXJaVWtSbDI2UmtmQ19Ed25Tak03Z0FjeEZfWkZQMWFxZUlZaG8wajQwVFRQODZ4eHNFUUYzY0JLWkI4MHUyOG40ekVBV3RLaEcwcnBYYW13WkppS2gtUGVUWWliejV4eHNnak5acGxIbWVYaXFaMDJ4cldLWGt3allLMHpmOFFfV0VQd25QU1dDa1JVNmo3S3Nfbm1rR1R3QVR1R3FrTEZsZnZHdDctSW80aHpwcDhmRTg0T1BhLW8yNEw3NzRNVzhYaVFwbnppZ0FaeWxFM1RpeUxkWjhFTzdyWk5xQ3VNQXc1WA?oc=5"
+         target="_blank"
+         rel="noopener noreferrer">
+        閱讀原文 →
+      </a>
+    </article>
+    
+
+    <article class="news-card">
+      <div class="news-meta">
+        <span class="source">工商時報</span>
+        <time>07/28 10:49</time>
+      </div>
+
+      <h2>
+        <a href="https://news.google.com/rss/articles/CBMiX0FVX3lxTE1EMlpfOUpxUVhaLXdnbnNlRnZfMlFhYXpBeDZNQjNmTXN0NnZ0LUVzX191bndkZ2N0cmRGWHdJVmRIZGNUcGJrSzFKZjdVSXZKU2J4T05FRmZnY19TNWVz?oc=5" target="_blank" rel="noopener noreferrer">
+          白海豚後面鯨魚跟上！專家曝最新颱風預測日本旅遊須當心- 生活
+        </a>
+      </h2>
+
+      <a class="read-more"
+         href="https://news.google.com/rss/articles/CBMiX0FVX3lxTE1EMlpfOUpxUVhaLXdnbnNlRnZfMlFhYXpBeDZNQjNmTXN0NnZ0LUVzX191bndkZ2N0cmRGWHdJVmRIZGNUcGJrSzFKZjdVSXZKU2J4T05FRmZnY19TNWVz?oc=5"
+         target="_blank"
+         rel="noopener noreferrer">
+        閱讀原文 →
+      </a>
+    </article>
+    
+
+    <article class="news-card">
+      <div class="news-meta">
+        <span class="source">NOWnews今日新聞</span>
+        <time>07/31 15:50</time>
+      </div>
+
+      <h2>
+        <a href="https://news.google.com/rss/articles/CBMiTEFVX3lxTE1RaFRsSnkwa0lSYmo1TGoyUlpXM3hHaXI0TE5VODJIZHdyZ2lNQ0tEV1lwWG4yUHdGblc5bXpuTm1YTVVwcExTTEhNdy3SAVJBVV95cUxPdDV4eU91RU04RTE1OURrZGQwY290SzV3V2JMSUN5elFEQzJCNzFvY0ZzQXRvMWJSTmVxVnhmQUlfdjlwSmk0aUVpSEhVSEI0S3ZB?oc=5" target="_blank" rel="noopener noreferrer">
+          白海豚颱風路徑大修！最新歐洲模式與AI預報曝 中國緊張了
+        </a>
+      </h2>
+
+      <a class="read-more"
+         href="https://news.google.com/rss/articles/CBMiTEFVX3lxTE1RaFRsSnkwa0lSYmo1TGoyUlpXM3hHaXI0TE5VODJIZHdyZ2lNQ0tEV1lwWG4yUHdGblc5bXpuTm1YTVVwcExTTEhNdy3SAVJBVV95cUxPdDV4eU91RU04RTE1OURrZGQwY290SzV3V2JMSUN5elFEQzJCNzFvY0ZzQXRvMWJSTmVxVnhmQUlfdjlwSmk0aUVpSEhVSEI0S3ZB?oc=5"
+         target="_blank"
+         rel="noopener noreferrer">
+        閱讀原文 →
+      </a>
+    </article>
+    
+
+    <article class="news-card">
+      <div class="news-meta">
+        <span class="source">太報 TaiSounds</span>
+        <time>07/31 08:33</time>
+      </div>
+
+      <h2>
+        <a href="https://news.google.com/rss/articles/CBMiXkFVX3lxTFBpaUtvT2w1b2pac1lwdENRTWFYeTBhbkoyTDh2UWE3by1uMFVRWnNLYjV5bWNBUldCc2paMW03b2s3N2QxbVVQc0VXWGR3TlVRVXpvVkRpM25UVUNrVlE?oc=5" target="_blank" rel="noopener noreferrer">
+          今西半部防午後雷雨周末酷熱 白海豚颱風增強下周移動日本| 天氣
+        </a>
+      </h2>
+
+      <a class="read-more"
+         href="https://news.google.com/rss/articles/CBMiXkFVX3lxTFBpaUtvT2w1b2pac1lwdENRTWFYeTBhbkoyTDh2UWE3by1uMFVRWnNLYjV5bWNBUldCc2paMW03b2s3N2QxbVVQc0VXWGR3TlVRVXpvVkRpM25UVUNrVlE?oc=5"
+         target="_blank"
+         rel="noopener noreferrer">
+        閱讀原文 →
+      </a>
+    </article>
+    
+
+    <article class="news-card">
+      <div class="news-meta">
+        <span class="source">Yahoo新聞</span>
+        <time>07/31 15:08</time>
+      </div>
+
+      <h2>
+        <a href="https://news.google.com/rss/articles/CBMi9wJBVV95cUxOSHEwZms0RFNHaG5PX1loUnZDLTFoNFZXdFpvMEgycDF2YmNrb3V4bEtJWGNhbUtQeGhWQzdFb2tWbGw4dFc1VGFsR3kyR2NYU0hkQTVBaG9QQkc3M0VrNVZ2SFQ4THpUNWprTHhpOVNLQUlXUGpHamp5UHdKeUotNFlxMGMza0dVc0EwblJ5aEk4MVk0Mm5NellRWFF2SG9OdVBxOGR6WVU2QlZYbFFlOG5VbmQ5RFZqcVcwdDl0N1dZa3FLWF92NGVJbTdxVWpQel9aNzE3bkt2a3UxUHZZajBpUDBFWlRRRnhyenA3UElFZ1hBdWhQR2pkRHlBUE9fNmxEbjJFd0Z2X0I1dWw4TGhLRGZVQzF4amRLYy0zbTk2aWw5OHgwckppN3kwLUFZWWtuaUxFWC01ankwckQzQ2hkOVM5MDA2S2tleFVhN1Y0U29vZ08tVzNkekRNWjlCejFSSW0wTTFGSzRmbVctLUJ6THhZTG8?oc=5" target="_blank" rel="noopener noreferrer">
+          有機會放颱風假？白海豚「路徑恐大轉彎」 最新預測曝光
+        </a>
+      </h2>
+
+      <a class="read-more"
+         href="https://news.google.com/rss/articles/CBMi9wJBVV95cUxOSHEwZms0RFNHaG5PX1loUnZDLTFoNFZXdFpvMEgycDF2YmNrb3V4bEtJWGNhbUtQeGhWQzdFb2tWbGw4dFc1VGFsR3kyR2NYU0hkQTVBaG9QQkc3M0VrNVZ2SFQ4THpUNWprTHhpOVNLQUlXUGpHamp5UHdKeUotNFlxMGMza0dVc0EwblJ5aEk4MVk0Mm5NellRWFF2SG9OdVBxOGR6WVU2QlZYbFFlOG5VbmQ5RFZqcVcwdDl0N1dZa3FLWF92NGVJbTdxVWpQel9aNzE3bkt2a3UxUHZZajBpUDBFWlRRRnhyenA3UElFZ1hBdWhQR2pkRHlBUE9fNmxEbjJFd0Z2X0I1dWw4TGhLRGZVQzF4amRLYy0zbTk2aWw5OHgwckppN3kwLUFZWWtuaUxFWC01ankwckQzQ2hkOVM5MDA2S2tleFVhN1Y0U29vZ08tVzNkekRNWjlCejFSSW0wTTFGSzRmbVctLUJ6THhZTG8?oc=5"
+         target="_blank"
+         rel="noopener noreferrer">
+        閱讀原文 →
+      </a>
+    </article>
+    
+    </section>
+
+    <footer class="footer">
+      新聞內容與標題著作權屬原發布媒體所有。
+      本頁僅顯示標題、來源、時間與原文連結。
+      颱風警報及旅行決策仍應以日本氣象廳、
+      航空公司與交通機構的正式公告為準。
+    </footer>
+  </main>
+</body>
+</html>
