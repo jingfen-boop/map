@@ -20,7 +20,10 @@
     .legend-item{display:flex;gap:8px;align-items:flex-start;background:#fff;border:1px solid #dfe7ea;border-radius:12px;padding:9px 10px;font-size:12px;line-height:1.55}
     .dot{width:12px;height:12px;border-radius:50%;margin-top:3px;flex:0 0 auto}
     .note{margin-top:12px;padding:12px 14px;border-radius:12px;background:#fff8e8;border:1px solid #eadab8;color:#745f3f;font-size:12px;line-height:1.7}
-    .pin-label{font-size:12px;font-weight:700;white-space:nowrap;background:#fff;border:1px solid #ccd7db;border-radius:10px;padding:2px 6px;box-shadow:0 1px 4px rgba(0,0,0,.14)}
+    .place-marker{display:flex;align-items:center;gap:5px;white-space:nowrap;transform:translateY(-50%)}
+    .place-dot{width:15px;height:15px;border-radius:50%;border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.35);flex:0 0 auto}
+    .place-name{padding:3px 7px;border-radius:9px;background:rgba(255,255,255,.94);border:2px solid;box-shadow:0 1px 5px rgba(0,0,0,.18);font-size:12px;font-weight:700;color:#35454c;line-height:1.2}
+    .leaflet-marker-icon{overflow:visible!important}
     .leaflet-popup-content{font-family:"Microsoft JhengHei","Noto Sans TC",Arial,sans-serif;line-height:1.6}
     .gmaps{display:inline-block;margin-top:6px;padding:6px 9px;border-radius:14px;background:#5f7d87;color:#fff!important;text-decoration:none;font-size:12px;font-weight:700}
     @media(max-width:700px){#map{height:600px}.title{font-size:20px}.day-btn{font-size:12px;padding:7px 10px}}
@@ -29,11 +32,11 @@
 <body>
 <div class="wrap">
   <div class="title">🗾 日本中部・北關東 9 天行程總覽地圖</div>
-  <div class="subtitle">每一天使用不同顏色；可點選上方按鈕顯示或隱藏該日行程，點擊標記可開啟 Google Maps。</div>
+  <div class="subtitle">每一天使用不同顏色，景點名稱直接顯示在地圖上；可點選上方按鈕顯示或隱藏該日行程，點擊地名可開啟 Google Maps。</div>
   <div class="toolbar" id="toolbar"></div>
   <div id="map"></div>
   <div class="legend" id="legend"></div>
-  <div class="note">此圖是「旅程總覽圖」，彩色線條為依每日景點順序連接的示意線，不代表實際道路或鐵路路徑。標記用於快速掌握每天位置分布；需要導航時請點標記內的 Google Maps 按鈕。</div>
+  <div class="note">此圖是「旅程總覽圖」，彩色線條為依每日景點順序連接的示意線，不代表實際道路或鐵路路徑。景點名稱已直接標示；東京等景點密集區可放大查看。需要導航時請點地名，再按 Google Maps 按鈕。</div>
 </div>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
@@ -73,8 +76,15 @@ const groups={};
 const toolbar=document.getElementById('toolbar');
 const legend=document.getElementById('legend');
 
-function markerIcon(day,color,index){
- return L.divIcon({className:'',html:`<div style="width:30px;height:30px;border-radius:50%;background:${color};color:#fff;border:3px solid #fff;box-shadow:0 1px 5px rgba(0,0,0,.35);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700">${day}-${index}</div>`,iconSize:[30,30],iconAnchor:[15,15],popupAnchor:[0,-15]});
+function markerIcon(name,color){
+ const safeName=name.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+ return L.divIcon({
+  className:'',
+  html:`<div class="place-marker"><span class="place-dot" style="background:${color}"></span><span class="place-name" style="border-color:${color}">${safeName}</span></div>`,
+  iconSize:[1,1],
+  iconAnchor:[7,0],
+  popupAnchor:[30,-8]
+ });
 }
 function googleUrl(name){return 'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(name+', Japan');}
 
@@ -83,7 +93,7 @@ days.forEach(d=>{
  const coords=[];
  d.places.forEach((p,i)=>{
   const [name,lat,lng]=p; coords.push([lat,lng]);
-  const marker=L.marker([lat,lng],{icon:markerIcon(d.day,d.color,i+1)}).addTo(g);
+  const marker=L.marker([lat,lng],{icon:markerIcon(name,d.color),zIndexOffset:100+d.day}).addTo(g);
   marker.bindPopup(`<b>Day ${d.day}｜${name}</b><br><a class="gmaps" target="_blank" rel="noopener" href="${googleUrl(name)}">在 Google Maps 開啟</a>`);
  });
  L.polyline(coords,{color:d.color,weight:4,opacity:.8,dashArray:d.day===9?'8,7':null}).addTo(g);
